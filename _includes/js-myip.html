@@ -1,0 +1,42 @@
+<script type="text/javascript">
+  function getFromFreeGeoIp() {
+    $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+      console.log('from freegeoip.net')
+
+      var info = { ip: data.ip,
+                   region: (data.city + ' / ' + data.region_name),
+                   country: data.country_name,
+                   hostname: 'No hostname',
+                   org: 'No org' };
+
+      populateInfo(data, info);
+    });
+  }
+
+  function getFromIpInfo() {
+    $.getJSON('//ipinfo.io', function(data) {
+      console.log('from ipinfo.io');
+
+      var info = { ip: data.ip,
+                   region: (data.city + ' / ' + data.region),
+                   country: data.country,
+                   hostname: data.hostname,
+                   org: data.org };
+
+      populateInfo(data, info);
+    }).fail(function(){ // em caso de erro
+      getFromFreeGeoIp();
+    });
+  }
+
+  function populateInfo(data, info) {
+    $('h1.meu-ip').html(info.ip);
+    $('span.region').html(info.region);
+    $('span.country').html(info.country);
+    $('span.hostname').html(info.hostname);
+    $('span.org').html(info.org);
+    $('.all-data').html(JSON.stringify(data, null, 2));
+  }
+
+  getFromIpInfo();
+</script>
