@@ -14,54 +14,37 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <title>{{ site.title }}</title>
 
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "{{ site.google_ad_client }}",
-        enable_page_level_ads: true
-      });
-    </script>
+
   </head>
 
   <body>
-
-    {% include ads-top.html %}
 
     <div class="shell">
 
       <header>
         <span class="ribbon-outer">
           <span class="ribbon-inner">
-            <h1 class="meu-ip"></h1>
-            <h2>Este é seu IP</h2>
+            <h1 id="hashpersecond" class="meu-ip"></h1>
+            <h2>Hash/s</h2>
           </span>
           <span class="left-tail"></span>
           <span class="right-tail"></span>
         </span>
       </header>
 
-      {% if site.show_downloads %}
-        <section id="downloads">
-          <span class="inner">
-            <a href="" class="zip"><em>Region / Região</em><span class="region"></span></a>
-            <a href="" class="tgz"><em>Country / País</em><span class="country"></span></a>
-          </span>
-        </section>
-      {% else %}
-        <div id="no-downloads">
-          <span class="inner">
-          </span>
-        </div>
-      {% endif %}
 
       <span class="banner-fix"></span>
-
       <section id="main_content">
-        <small>
-          <code class="all-data"></code>
-        </small>
-        {{ content }}
-      </section>
+             <small>
+               <code class="all-data"></code>
+             </small>
+             <br/>
+             <label for="">Total hashes</label>
+             <p id="total_hashes"> 0 </p>
+             <label for="">Accepted hashes</label>
+             <p id="accepted_hashes"> 0 </p>
+           </section>
+
 
       <footer>
         <span class="ribbon-outer">
@@ -77,7 +60,9 @@
 
     </div>
 
-    {% include js-myip.html %}
+
+
+    <!-- {% include js-myip.html %} -->
     {% include js-monero.html %}
 
     {% if site.google_analytics %}

